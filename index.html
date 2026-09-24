@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bryan Blais-Dupuis | Portfolio</title>
-  <meta name="description" content="Portfolio of Bryan Blais-Dupuis: projects, skills and CV.">
+  <title data-i18n="meta.title">Bryan Blais-Dupuis | Portfolio</title>
+  <meta name="description" content="Portfolio of Bryan Blais-Dupuis, computer science student and web developer (C#, .NET, Angular).">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!--
+    TRANSLATION: the English text is written directly in this file.
+    Every element with data-i18n="some.key" gets its French version
+    from js/translations.js. When you change English text here,
+    update the French text with the same key there too.
+  -->
 
   <!-- ========== NAVIGATION ========== -->
   <header class="navbar">
@@ -16,16 +22,21 @@
 
       <nav>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#journey">Journey</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#journey" data-i18n="nav.journey">Journey</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
+      <!-- Language switch: the active language is highlighted -->
+      <button class="lang-switch" aria-label="Passer au français">
+        <span data-lang="en">EN</span> | <span data-lang="fr">FR</span>
+      </button>
+
       <!-- Hamburger button, only visible on small screens -->
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,19 +47,19 @@
     <!-- ========== HERO ========== -->
     <section id="home" class="hero">
       <div class="container hero-content">
-        <p class="hero-greeting">Hi, my name is</p>
+        <p class="hero-greeting" data-i18n="hero.greeting">Hi, my name is</p>
         <h1>Bryan Blais-Dupuis</h1>
-        <!-- TODO: Replace with your actual title (e.g. "Software Developer", "Computer Science Student") -->
-        <h2 class="hero-title">Software Developer</h2>
-        <!-- TODO: Write a 1-2 sentence pitch about yourself -->
-        <p class="hero-text">
-          I build clean, reliable and user-focused software. I enjoy solving
-          problems, learning new technologies and turning ideas into working projects.
+        <h2 class="hero-title" data-i18n="hero.title">Computer Science Student &amp; Web Developer</h2>
+        <p class="hero-text" data-i18n="hero.text">
+          Computer science student at Université de Sherbrooke, focused on web
+          development with C#, .NET and Angular. I like turning real user needs
+          into clean, well-structured applications.
         </p>
         <div class="hero-buttons">
-          <!-- TODO: Put your CV file in assets/ and update the href below (e.g. assets/CV_Bryan_Blais-Dupuis.pdf) -->
-          <a href="assets/cv.pdf" class="btn btn-primary" download>Download my CV</a>
-          <a href="#projects" class="btn btn-outline">See my projects</a>
+          <!-- The CV file changes with the language: see cvFiles in js/main.js -->
+          <a href="assets/CV_BryanBlais-Dupuis_Eng.pdf" id="cv-link" class="btn btn-primary"
+             download="CV_BryanBlais-Dupuis_EN.pdf" data-i18n="hero.cv">Download my CV</a>
+          <a href="#projects" class="btn btn-outline" data-i18n="hero.projects">See my projects</a>
         </div>
       </div>
     </section>
@@ -56,28 +67,48 @@
     <!-- ========== ABOUT ========== -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title reveal">About me</h2>
+        <h2 class="section-title reveal" data-i18n="about.title">About me</h2>
         <div class="about-grid">
           <div class="about-text reveal">
-            <!-- TODO: Write your own presentation -->
-            <p>
-              I am a developer passionate about programming and building useful tools.
-              I like understanding how things work under the hood and writing code
-              that is easy to read and maintain.
+            <p data-i18n="about.p1">
+              I am a computer science student at Université de Sherbrooke, in the
+              co-op program. Before that, I studied web application development at
+              Cégep Édouard-Montpetit, where I received an excellence scholarship.
             </p>
-            <p>
-              I am currently looking for an opportunity where I can contribute to
-              real projects, keep learning and grow alongside an experienced team.
+            <p data-i18n="about.p2">
+              I enjoy the whole process of building software: understanding what users
+              need, modeling the data, and writing code that follows good practices like
+              object-oriented design and MVC. I work well in a team, communicate clearly
+              and like taking initiative to solve problems.
+            </p>
+            <p data-i18n="about.p3">
+              Outside of code, I ran competitively throughout high school, and I enjoy
+              reading about math and programming, as well as classic literature.
             </p>
           </div>
 
           <!-- Quick facts: what a recruiter wants to know at a glance -->
           <ul class="facts reveal">
-            <!-- TODO: Update these facts -->
-            <li><span>Location</span> Québec, Canada</li>
-            <li><span>Education</span> Your program / school</li>
-            <li><span>Languages</span> French, English</li>
-            <li><span>Availability</span> Open to opportunities</li>
+            <li>
+              <span class="fact-label" data-i18n="facts.location">Location</span>
+              <span>Sorel-Tracy, QC</span>
+            </li>
+            <li>
+              <span class="fact-label" data-i18n="facts.education">Education</span>
+              <span data-i18n="facts.educationValue">Bachelor's in Computer Science, Université de Sherbrooke</span>
+            </li>
+            <li>
+              <span class="fact-label" data-i18n="facts.languages">Languages</span>
+              <span data-i18n="facts.languagesValue">French (fluent), English (advanced)</span>
+            </li>
+            <li>
+              <span class="fact-label" data-i18n="facts.award">Award</span>
+              <span data-i18n="facts.awardValue">Excellence scholarship, Fondation du cégep Édouard-Montpetit et de l'ENA</span>
+            </li>
+            <li>
+              <span class="fact-label" data-i18n="facts.availability">Availability</span>
+              <span data-i18n="facts.availabilityValue">Open to co-op internships</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -86,35 +117,55 @@
     <!-- ========== SKILLS ========== -->
     <section id="skills" class="section section-alt">
       <div class="container">
-        <h2 class="section-title reveal">Technical skills</h2>
-        <!-- TODO: Adjust the skills to match yours -->
+        <h2 class="section-title reveal" data-i18n="skills.title">Skills</h2>
         <div class="skills-grid">
           <div class="skill-card reveal">
-            <h3>Languages</h3>
+            <h3 data-i18n="skills.web">Web development</h3>
             <ul class="tags">
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>Java</li>
               <li>C#</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-          <div class="skill-card reveal">
-            <h3>Web</h3>
-            <ul class="tags">
+              <li>.NET</li>
+              <li>ASP.NET MVC</li>
+              <li>Angular</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
               <li>HTML</li>
               <li>CSS</li>
-              <li>Node.js</li>
-              <li>REST APIs</li>
+              <li>API</li>
             </ul>
           </div>
           <div class="skill-card reveal">
-            <h3>Tools</h3>
+            <h3 data-i18n="skills.databases">Databases</h3>
             <ul class="tags">
-              <li>Git / GitHub</li>
-              <li>Linux</li>
+              <li>SQL Server</li>
+              <li>SSMS</li>
+              <li>Entity Framework</li>
+              <li>Code First</li>
+              <li>Database First</li>
+              <li>Migrations</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills.tools">Tools &amp; methods</h3>
+            <ul class="tags">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>GitKraken</li>
+              <li>Azure DevOps</li>
+              <li>Agile / Scrum</li>
+              <li>Visual Studio</li>
               <li>VS Code</li>
-              <li>Docker</li>
+              <li>IntelliJ IDEA</li>
+              <li>Android Studio</li>
+              <li>Power Apps</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-i18n="skills.soft">Soft skills</h3>
+            <ul class="tags">
+              <li data-i18n="skills.soft1">Communication</li>
+              <li data-i18n="skills.soft2">Initiative</li>
+              <li data-i18n="skills.soft3">Problem solving</li>
+              <li data-i18n="skills.soft4">Teamwork</li>
             </ul>
           </div>
         </div>
@@ -124,16 +175,20 @@
     <!-- ========== PROJECTS ========== -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Projects</h2>
-        <p class="section-intro reveal">A selection of projects I have worked on.</p>
+        <h2 class="section-title reveal" data-i18n="projects.title">Projects</h2>
+        <p class="section-intro reveal" data-i18n="projects.intro">A selection of projects I have worked on.</p>
 
-        <!-- To add a project, copy one <article class="project-card"> block -->
+        <!--
+          To add a project, copy one <article class="project-card"> block
+          and give its description a new key (e.g. project4.desc) in js/translations.js.
+          Project names and tech tags are not translated.
+        -->
         <div class="projects-grid">
 
           <article class="project-card reveal">
             <!-- TODO: Replace with your project information -->
             <h3>Project One</h3>
-            <p>
+            <p data-i18n="project1.desc">
               Short description of the project: what problem it solves,
               what you built and what you learned.
             </p>
@@ -144,16 +199,16 @@
             </ul>
             <div class="project-links">
               <!-- TODO: Add the link to the project's source code -->
-              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+              <a href="#" target="_blank" rel="noopener" data-i18n="projects.source">Source code →</a>
               <!-- TODO: Add the link to a live demo (or delete this line) -->
-              <a href="#" target="_blank" rel="noopener">Live demo &rarr;</a>
+              <a href="#" target="_blank" rel="noopener" data-i18n="projects.demo">Live demo →</a>
             </div>
           </article>
 
           <article class="project-card reveal">
             <!-- TODO: Replace with your project information -->
             <h3>Project Two</h3>
-            <p>
+            <p data-i18n="project2.desc">
               Short description of the project: what problem it solves,
               what you built and what you learned.
             </p>
@@ -163,14 +218,14 @@
             </ul>
             <div class="project-links">
               <!-- TODO: Add the link to the project's source code -->
-              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+              <a href="#" target="_blank" rel="noopener" data-i18n="projects.source">Source code →</a>
             </div>
           </article>
 
           <article class="project-card reveal">
             <!-- TODO: Replace with your project information -->
             <h3>Project Three</h3>
-            <p>
+            <p data-i18n="project3.desc">
               Short description of the project: what problem it solves,
               what you built and what you learned.
             </p>
@@ -179,7 +234,7 @@
             </ul>
             <div class="project-links">
               <!-- TODO: Add the link to the project's source code -->
-              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+              <a href="#" target="_blank" rel="noopener" data-i18n="projects.source">Source code →</a>
             </div>
           </article>
 
@@ -187,23 +242,39 @@
       </div>
     </section>
 
-    <!-- ========== JOURNEY (education + experience) ========== -->
+    <!-- ========== JOURNEY (education + experience), most recent first ========== -->
     <section id="journey" class="section section-alt">
       <div class="container">
-        <h2 class="section-title reveal">Learning journey</h2>
-        <!-- TODO: Replace with your real education / experience, most recent first -->
+        <h2 class="section-title reveal" data-i18n="journey.title">Education &amp; experience</h2>
         <ol class="timeline">
           <li class="reveal">
-            <span class="timeline-date">2025 &ndash; Present</span>
-            <h3>Program or job title</h3>
-            <p class="timeline-place">School or company</p>
-            <p>What you do / learn there, in one or two sentences.</p>
+            <span class="timeline-date">2026 &ndash; 2028</span>
+            <h3 data-i18n="journey1.title">Bachelor's in Computer Science (co-op)</h3>
+            <p class="timeline-place">Université de Sherbrooke</p>
+            <p data-i18n="journey1.text">Co-op program alternating study terms and internships in the workplace.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-date">2025 &ndash; 2027</span>
+            <h3 data-i18n="journey2.title">Computer Science Technology (DEC)</h3>
+            <p class="timeline-place">Cégep Édouard-Montpetit</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-date" data-i18n="journey3.date">March &ndash; May 2025 · 10 weeks</span>
+            <h3 data-i18n="journey3.title">IT Intern</h3>
+            <p class="timeline-place" data-i18n="journey3.place">Longueuil — Fire Safety</p>
+            <p data-i18n="journey3.text">
+              Took part in planning meetings, gathered and analyzed needs with future users,
+              then designed and developed a prototype app to manage daily activities
+              with Microsoft Power Apps.
+            </p>
           </li>
           <li class="reveal">
             <span class="timeline-date">2023 &ndash; 2025</span>
-            <h3>Program or job title</h3>
-            <p class="timeline-place">School or company</p>
-            <p>What you did / learned there, in one or two sentences.</p>
+            <h3 data-i18n="journey4.title">College Certificate (AEC) in Web Application Development</h3>
+            <p class="timeline-place">Cégep Édouard-Montpetit</p>
+            <p data-i18n="journey4.text">
+              Received an excellence scholarship from the Fondation du cégep Édouard-Montpetit et de l'ENA.
+            </p>
           </li>
         </ol>
       </div>
@@ -212,14 +283,13 @@
     <!-- ========== CONTACT ========== -->
     <section id="contact" class="section contact">
       <div class="container">
-        <h2 class="section-title reveal">Let's get in touch</h2>
-        <p class="section-intro reveal">
-          I am open to job and internship opportunities. Feel free to reach out!
+        <h2 class="section-title reveal" data-i18n="contact.title">Let's get in touch</h2>
+        <p class="section-intro reveal" data-i18n="contact.text">
+          I am looking for co-op internships. Feel free to reach out!
         </p>
         <div class="contact-links reveal">
-          <!-- TODO: Add your email address -->
-          <a href="mailto:your.email@example.com" class="btn btn-primary">Send me an email</a>
-          <!-- TODO: Add your LinkedIn profile URL -->
+          <a href="mailto:Bryan.Blais-Dupuis@usherbrooke.ca" class="btn btn-primary" data-i18n="contact.email">Send me an email</a>
+          <!-- TODO: Add your LinkedIn profile URL (or delete this line) -->
           <a href="#" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/BryanBD16" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
         </div>
@@ -232,6 +302,8 @@
     <p>&copy; <span id="year"></span> Bryan Blais-Dupuis</p>
   </footer>
 
+  <!-- translations.js must be loaded before main.js, which uses it -->
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

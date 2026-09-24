@@ -58,3 +58,58 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+// ========== LANGUAGE SWITCH (English / French) ==========
+// The CV file to download for each language
+const cvFiles = {
+  en: { path: "assets/CV_BryanBlais-Dupuis_Eng.pdf", saveAs: "CV_BryanBlais-Dupuis_EN.pdf" },
+  fr: { path: "assets/CV_BryanBlais-Dupuis_Fr.pdf", saveAs: "CV_BryanBlais-Dupuis_FR.pdf" },
+};
+
+const translatable = document.querySelectorAll("[data-i18n]");
+const langSwitch = document.querySelector(".lang-switch");
+const cvLink = document.getElementById("cv-link");
+
+// Remember the original English text written in the HTML
+const englishText = {};
+translatable.forEach((el) => {
+  englishText[el.dataset.i18n] = el.textContent;
+});
+
+function setLanguage(lang) {
+  const texts = lang === "fr" ? frenchText : englishText;
+
+  translatable.forEach((el) => {
+    const key = el.dataset.i18n;
+    if (texts[key]) {
+      el.textContent = texts[key];
+    }
+  });
+
+  document.documentElement.lang = lang;
+
+  cvLink.href = cvFiles[lang].path;
+  cvLink.download = cvFiles[lang].saveAs;
+
+  // Highlight the active language in the switch button
+  langSwitch.querySelectorAll("[data-lang]").forEach((span) => {
+    span.classList.toggle("active", span.dataset.lang === lang);
+  });
+  langSwitch.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer au français");
+
+  // Remember the choice for the next visit (can fail in private browsing)
+  try {
+    localStorage.setItem("lang", lang);
+  } catch (error) {}
+}
+
+langSwitch.addEventListener("click", () => {
+  setLanguage(document.documentElement.lang === "fr" ? "en" : "fr");
+});
+
+// On page load: use the saved choice, otherwise the browser's language
+let startLang = navigator.language.startsWith("fr") ? "fr" : "en";
+try {
+  startLang = localStorage.getItem("lang") || startLang;
+} catch (error) {}
+setLanguage(startLang);

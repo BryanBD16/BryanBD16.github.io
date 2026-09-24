@@ -9,4 +9,4 @@ The website presents my:
 - CV
 - Programming experiments
 
-🌐 **Website:** bryanbd16.github.io/bryanblaisdupuis.github.io/
+🌐 **Website:** [bryanbd16.github.io](https://bryanbd16.github.io)
