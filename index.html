@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryan Blais-Dupuis | Portfolio</title>
+  <meta name="description" content="Portfolio of Bryan Blais-Dupuis: projects, skills and CV.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo">BBD<span>.</span></a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger button, only visible on small screens -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <p class="hero-greeting">Hi, my name is</p>
+        <h1>Bryan Blais-Dupuis</h1>
+        <!-- TODO: Replace with your actual title (e.g. "Software Developer", "Computer Science Student") -->
+        <h2 class="hero-title">Software Developer</h2>
+        <!-- TODO: Write a 1-2 sentence pitch about yourself -->
+        <p class="hero-text">
+          I build clean, reliable and user-focused software. I enjoy solving
+          problems, learning new technologies and turning ideas into working projects.
+        </p>
+        <div class="hero-buttons">
+          <!-- TODO: Put your CV file in assets/ and update the href below (e.g. assets/CV_Bryan_Blais-Dupuis.pdf) -->
+          <a href="assets/cv.pdf" class="btn btn-primary" download>Download my CV</a>
+          <a href="#projects" class="btn btn-outline">See my projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <!-- TODO: Write your own presentation -->
+            <p>
+              I am a developer passionate about programming and building useful tools.
+              I like understanding how things work under the hood and writing code
+              that is easy to read and maintain.
+            </p>
+            <p>
+              I am currently looking for an opportunity where I can contribute to
+              real projects, keep learning and grow alongside an experienced team.
+            </p>
+          </div>
+
+          <!-- Quick facts: what a recruiter wants to know at a glance -->
+          <ul class="facts reveal">
+            <!-- TODO: Update these facts -->
+            <li><span>Location</span> Québec, Canada</li>
+            <li><span>Education</span> Your program / school</li>
+            <li><span>Languages</span> French, English</li>
+            <li><span>Availability</span> Open to opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Technical skills</h2>
+        <!-- TODO: Adjust the skills to match yours -->
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Web</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Node.js</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Tools</h3>
+            <ul class="tags">
+              <li>Git / GitHub</li>
+              <li>Linux</li>
+              <li>VS Code</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-intro reveal">A selection of projects I have worked on.</p>
+
+        <!-- To add a project, copy one <article class="project-card"> block -->
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <!-- TODO: Replace with your project information -->
+            <h3>Project One</h3>
+            <p>
+              Short description of the project: what problem it solves,
+              what you built and what you learned.
+            </p>
+            <ul class="tags">
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <!-- TODO: Add the link to the project's source code -->
+              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+              <!-- TODO: Add the link to a live demo (or delete this line) -->
+              <a href="#" target="_blank" rel="noopener">Live demo &rarr;</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <!-- TODO: Replace with your project information -->
+            <h3>Project Two</h3>
+            <p>
+              Short description of the project: what problem it solves,
+              what you built and what you learned.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>SQL</li>
+            </ul>
+            <div class="project-links">
+              <!-- TODO: Add the link to the project's source code -->
+              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <!-- TODO: Replace with your project information -->
+            <h3>Project Three</h3>
+            <p>
+              Short description of the project: what problem it solves,
+              what you built and what you learned.
+            </p>
+            <ul class="tags">
+              <li>Java</li>
+            </ul>
+            <div class="project-links">
+              <!-- TODO: Add the link to the project's source code -->
+              <a href="#" target="_blank" rel="noopener">Source code &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== JOURNEY (education + experience) ========== -->
+    <section id="journey" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Learning journey</h2>
+        <!-- TODO: Replace with your real education / experience, most recent first -->
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline-date">2025 &ndash; Present</span>
+            <h3>Program or job title</h3>
+            <p class="timeline-place">School or company</p>
+            <p>What you do / learn there, in one or two sentences.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline-date">2023 &ndash; 2025</span>
+            <h3>Program or job title</h3>
+            <p class="timeline-place">School or company</p>
+            <p>What you did / learned there, in one or two sentences.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">Let's get in touch</h2>
+        <p class="section-intro reveal">
+          I am open to job and internship opportunities. Feel free to reach out!
+        </p>
+        <div class="contact-links reveal">
+          <!-- TODO: Add your email address -->
+          <a href="mailto:your.email@example.com" class="btn btn-primary">Send me an email</a>
+          <!-- TODO: Add your LinkedIn profile URL -->
+          <a href="#" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/BryanBD16" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Bryan Blais-Dupuis</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
