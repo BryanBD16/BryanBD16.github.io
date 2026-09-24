@@ -66,14 +66,24 @@ const frenchText = {
   "projects.source": "Code source →",
   "projects.demo": "Démo en ligne →",
   "project1.desc":
-    "Courte description du projet : le problème qu'il résout, " +
-    "ce que vous avez construit et ce que vous avez appris.",
+    "Une plateforme web pour réviser la matière de cours, et mon premier projet " +
+    "déployé en production. Je l'ai surtout construit comme une expérience de " +
+    "développement assisté par des agents d'IA, pour aller au-delà de ce que " +
+    "j'aurais pu bâtir seul. Je ne maîtrise pas encore chaque partie du code, " +
+    "et c'est justement le but : ce projet me sort de ma zone de confort " +
+    "et je continue d'apprendre en le faisant évoluer.",
   "project2.desc":
-    "Courte description du projet : le problème qu'il résout, " +
-    "ce que vous avez construit et ce que vous avez appris.",
+    "Un projet de pratique personnel : une application web de boutique en ligne " +
+    "développée en C#, .NET et Entity Framework avec une base de données MySQL. " +
+    "J'ai planifié et suivi le travail avec un backlog dans GitHub Projects " +
+    "pour pratiquer une démarche de développement organisée. " +
+    "C'est un projet d'apprentissage et il n'est pas déployé en production.",
   "project3.desc":
-    "Courte description du projet : le problème qu'il résout, " +
-    "ce que vous avez construit et ce que vous avez appris.",
+    "Un laboratoire personnel où j'apprends Docker étape par étape à travers " +
+    "de petits exercices documentés : lancer des conteneurs, écrire des Dockerfiles, " +
+    "construire des images, jusqu'aux applications multi-conteneurs avec Docker Compose. " +
+    "C'est un projet d'apprentissage que je poursuis par intérêt pour la façon " +
+    "dont les applications sont empaquetées et déployées.",
 
   // Journey
   "journey.title": "Formation et expérience",

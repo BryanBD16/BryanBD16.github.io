@@ -62,8 +62,8 @@ sections.forEach((section) => sectionObserver.observe(section));
 // ========== LANGUAGE SWITCH (English / French) ==========
 // The CV file to download for each language
 const cvFiles = {
-  en: { path: "assets/CV_BryanBlais-Dupuis_Eng.pdf", saveAs: "CV_BryanBlais-Dupuis_EN.pdf" },
-  fr: { path: "assets/CV_BryanBlais-Dupuis_Fr.pdf", saveAs: "CV_BryanBlais-Dupuis_FR.pdf" },
+  en: { path: "assets/CV_BryanBlais-Dupuis_eng.pdf", saveAs: "CV_BryanBlais-Dupuis_EN.pdf" },
+  fr: { path: "assets/CV_BryanBlais-Dupuis_fr.pdf", saveAs: "CV_BryanBlais-Dupuis_FR.pdf" },
 };
 
 const translatable = document.querySelectorAll("[data-i18n]");
